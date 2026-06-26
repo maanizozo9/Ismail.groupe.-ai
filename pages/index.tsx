@@ -1,18 +1,66 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 export default function Home() {
   const payhip = 'https://payhip.com/IsmailgroupAI'
+  const siteUrl = 'https://ismail-groupe-7t6g3zjoq-ismail-group.vercel.app'
+
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Ismail Group AI',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
+    description: 'High-quality digital products and AI tools',
+    sameAs: [payhip],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Customer Support',
+      email: 'support@ismailgroupai.com',
+    },
+  }
 
   return (
     <>
       <Head>
-        <title>Ismail Group AI — Digital Products</title>
-        <meta name="description" content="Digital products & AI tools by Ismail Group — available on Payhip" />
-        <meta property="og:title" content="Ismail Group AI — Digital Products" />
-        <meta property="og:description" content="Digital products & AI tools by Ismail Group — available on Payhip" />
-        <meta property="og:url" content="https://ismailgroupai.vercel.app/" />
+        <title>Ismail Group AI — Premium Digital Products & AI Tools</title>
+        <meta name="description" content="High-quality digital products and AI tools by Ismail Group. Premium templates, prompts, and resources available on Payhip." />
+        <meta name="keywords" content="AI tools, digital products, templates, prompts, Payhip, digital assets" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charSet="utf-8" />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href={siteUrl} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Ismail Group AI — Premium Digital Products & AI Tools" />
+        <meta property="og:description" content="High-quality digital products and AI tools by Ismail Group. Buy with instant access on Payhip." />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:site_name" content="Ismail Group AI" />
+        <meta property="og:image" content={`${siteUrl}/og-image.png`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ismail Group AI — Premium Digital Products & AI Tools" />
+        <meta name="twitter:description" content="High-quality digital products and AI tools by Ismail Group" />
+        <meta name="twitter:image" content={`${siteUrl}/og-image.png`} />
+        
+        {/* Additional Meta Tags */}
+        <meta name="author" content="Ismail Group" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="theme-color" content="#4f46e5" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </Head>
 
       <div className="min-h-screen flex flex-col">
@@ -27,7 +75,7 @@ export default function Home() {
 
                 <div className="mt-8 flex gap-4 flex-wrap">
                   <a href={payhip} target="_blank" rel="noreferrer" className="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-md shadow hover:opacity-95 transition">Visit our Payhip Store</a>
-                  <a href="/products" className="border border-white text-white px-6 py-3 rounded-md hover:opacity-90 transition">View Products</a>
+                  <Link href="/products" className="border border-white text-white px-6 py-3 rounded-md hover:opacity-90 transition">View Products</Link>
                 </div>
 
                 <p className="mt-6 text-sm opacity-90">✓ Global audience • Arabic & English support</p>
@@ -35,7 +83,7 @@ export default function Home() {
 
               <div className="lg:w-1/2 mt-12 lg:mt-0 flex justify-center">
                 <div className="w-full max-w-md bg-white/10 rounded-xl p-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" className="w-full h-auto rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" className="w-full h-auto rounded" alt="Digital Products Hero">
                     <defs>
                       <linearGradient id="g" x1="0" x2="1">
                         <stop offset="0" stopColor="#7c3aed" />
@@ -59,17 +107,17 @@ export default function Home() {
             <h2 className="text-3xl font-semibold">Why choose our products?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="p-6 border rounded-lg hover:shadow-lg transition">
-                <div className="text-4xl mb-3">🎯</div>
+                <div className="text-4xl mb-3" aria-label="Premium Quality">🎯</div>
                 <h3 className="font-semibold text-lg">Premium Quality</h3>
                 <p className="mt-2 text-sm text-gray-600">Professionally designed digital assets and AI tools crafted for excellence.</p>
               </div>
               <div className="p-6 border rounded-lg hover:shadow-lg transition">
-                <div className="text-4xl mb-3">⚡</div>
+                <div className="text-4xl mb-3" aria-label="Easy to Use">⚡</div>
                 <h3 className="font-semibold text-lg">Easy to Use</h3>
                 <p className="mt-2 text-sm text-gray-600">Clear instructions and instant downloads. Get started in minutes.</p>
               </div>
               <div className="p-6 border rounded-lg hover:shadow-lg transition">
-                <div className="text-4xl mb-3">🌍</div>
+                <div className="text-4xl mb-3" aria-label="Global Support">🌍</div>
                 <h3 className="font-semibold text-lg">Global Support</h3>
                 <p className="mt-2 text-sm text-gray-600">Support in Arabic and English. Serving customers worldwide.</p>
               </div>
@@ -81,7 +129,7 @@ export default function Home() {
               <h2 className="text-3xl font-semibold mb-8">Featured Product</h2>
               <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-lg shadow">
                 <div className="md:w-1/3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" className="w-full h-auto rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" className="w-full h-auto rounded" alt="AI Toolkit Product">
                     <rect width="100%" height="100%" rx="12" fill="#f8fafc" stroke="#e6eef8" strokeWidth="2" />
                     <rect x="20" y="20" width="160" height="120" rx="8" fill="#eef2ff" />
                     <rect x="200" y="20" width="360" height="120" rx="8" fill="#dbeafe" />

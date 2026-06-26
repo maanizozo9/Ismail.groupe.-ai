@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.well-known/
+
+Sitemap: https://ismail-groupe-7t6g3zjoq-ismail-group.vercel.app/sitemap.xml

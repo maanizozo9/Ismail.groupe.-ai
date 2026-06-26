@@ -33,40 +33,6 @@ export const SEO_CONFIG = {
     'max-image-preview': 'large',
     'max-video-preview': -1,
   },
-
-  additionalMetaTags: [
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1',
-    },
-    {
-      name: 'keywords',
-      content: 'AI tools, digital products, templates, prompts, Payhip store, digital assets',
-    },
-    {
-      name: 'author',
-      content: 'Ismail Group',
-    },
-    {
-      name: 'theme-color',
-      content: '#4f46e5',
-    },
-    {
-      httpEquiv: 'x-ua-compatible',
-      content: 'IE=edge',
-    },
-  ],
-
-  languageAlternates: [
-    {
-      hrefLang: 'en',
-      href: 'https://ismail-groupe-7t6g3zjoq-ismail-group.vercel.app',
-    },
-    {
-      hrefLang: 'ar',
-      href: 'https://ismail-groupe-7t6g3zjoq-ismail-group.vercel.app/ar',
-    },
-  ],
 };
 
 export const COMPANY_DATA = {
@@ -77,13 +43,5 @@ export const COMPANY_DATA = {
   phone: '+1-234-567-8900',
   sameAs: [
     'https://payhip.com/IsmailgroupAI',
-    'https://twitter.com/IsmailGroupAI',
   ],
-  address: {
-    streetAddress: '123 Digital Street',
-    addressLocality: 'Tech City',
-    addressRegion: 'TC',
-    postalCode: '12345',
-    addressCountry: 'US',
-  },
 };
