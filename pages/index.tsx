@@ -82,8 +82,8 @@ export default function Home() {
               </div>
 
               <div className="lg:w-1/2 mt-12 lg:mt-0 flex justify-center">
-                <div className="w-full max-w-md bg-white/10 rounded-xl p-6">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" className="w-full h-auto rounded" alt="Digital Products Hero">
+                <div className="w-full max-w-md bg-white/10 rounded-xl p-6" role="img" aria-label="Digital Products Hero">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" className="w-full h-auto rounded">
                     <defs>
                       <linearGradient id="g" x1="0" x2="1">
                         <stop offset="0" stopColor="#7c3aed" />
@@ -128,8 +128,8 @@ export default function Home() {
             <div className="container mx-auto px-6 lg:px-20">
               <h2 className="text-3xl font-semibold mb-8">Featured Product</h2>
               <div className="flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-lg shadow">
-                <div className="md:w-1/3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" className="w-full h-auto rounded" alt="AI Toolkit Product">
+                <div className="md:w-1/3" role="img" aria-label="AI Toolkit Product">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" className="w-full h-auto rounded">
                     <rect width="100%" height="100%" rx="12" fill="#f8fafc" stroke="#e6eef8" strokeWidth="2" />
                     <rect x="20" y="20" width="160" height="120" rx="8" fill="#eef2ff" />
                     <rect x="200" y="20" width="360" height="120" rx="8" fill="#dbeafe" />
