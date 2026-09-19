@@ -75,7 +75,7 @@ export default function Home() {
 
                 <div className="mt-8 flex gap-4 flex-wrap">
                   <a href={payhip} target="_blank" rel="noreferrer" className="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-md shadow hover:opacity-95 transition">Visit our Payhip Store</a>
-                  <Link href="/products" className="border border-white text-white px-6 py-3 rounded-md hover:opacity-90 transition">View Products</Link>
+                  <Link href="/audit" className="border border-white text-white px-6 py-3 rounded-md hover:opacity-90 transition">Free Store Audit</Link>
                 </div>
 
                 <p className="mt-6 text-sm opacity-90">✓ Global audience • Arabic & English support</p>
